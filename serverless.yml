@@ -9,6 +9,14 @@ provider:
   runtime: nodejs24.x
   memorySize: 128
 
+package:
+  individually: true
+
+build:
+  esbuild:
+    sourcemap: false
+    minify: true
+
 functions:
   hello:
     handler: src/functions/hello.handler
