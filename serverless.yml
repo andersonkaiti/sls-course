@@ -1,0 +1,14 @@
+org: andersonkaiti
+service: api-serverless
+
+provider:
+  name: aws
+  runtime: nodejs24.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
