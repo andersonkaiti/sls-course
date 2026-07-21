@@ -6,9 +6,15 @@ provider:
   runtime: nodejs24.x
 
 functions:
-  api:
-    handler: index.handler
+  hello:
+    handler: src/functions/hello.handler
     events:
       - httpApi:
           path: /
-          method: get
+          method: GET
+  getUserById:
+    handler: src/functions/get-user-by-id.handler
+    events:
+      - httpApi:
+          path: /users/{userId}
+          method: GET
