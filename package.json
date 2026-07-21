@@ -1,11 +1,17 @@
 {
   "name": "sls-course",
   "type": "module",
+  "scripts": {
+    "dev": "serverless offline --reloadHandler"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
       "version": "^11.5.0",
       "onFail": "download"
     }
+  },
+  "devDependencies": {
+    "serverless-offline": "^14.7.4"
   }
 }

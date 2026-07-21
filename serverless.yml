@@ -1,6 +1,9 @@
 org: andersonkaiti
 service: api-serverless
 
+plugins:
+  - serverless-offline
+
 provider:
   name: aws
   runtime: nodejs24.x
