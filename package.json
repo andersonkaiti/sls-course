@@ -2,7 +2,9 @@
   "name": "sls-course",
   "type": "module",
   "scripts": {
-    "dev": "serverless offline --reloadHandler"
+    "dev": "serverless offline --reloadHandler",
+    "format": "biome check --write",
+    "prepare": "husky || exit 0"
   },
   "devEngines": {
     "packageManager": {
@@ -12,7 +14,14 @@
     }
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.4",
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/types": "^21.2.0",
     "@types/aws-lambda": "^8.10.162",
+    "commitlint-config-gitmoji": "^2.3.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.1.0",
     "serverless-offline": "^14.7.4",
     "typescript": "^7.0.2"
   }
