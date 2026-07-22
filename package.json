@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "serverless offline --reloadHandler",
     "format": "biome check --write",
+    "typecheck": "tsc --noEmit",
     "prepare": "husky || exit 0"
   },
   "devEngines": {
